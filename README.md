@@ -13,7 +13,7 @@ How to Run:
 #4. execute 'touch valve.foam' to prepare the file for post-processing
 #5. execute './cleanResults' to delete the time and processor folders
 
-Or simply execute 'Allrun' to execute the 'buildMesh', and 'Run' commands.
+Or simply execute './Allrun' to execute the 'buildMesh', and 'Run' commands.
 
 Documentation:
 v1: October 5th, 2024 = basic internal flow with snappyHexMesh (first release)
