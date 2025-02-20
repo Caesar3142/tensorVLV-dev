@@ -23,10 +23,9 @@ addLayers      false;
 
 geometry
 {
-    body.stl { type triSurfaceMesh; name body;}
-    inlet1.stl { type triSurfaceMesh; name inlet1;}
-    inlet2.stl { type triSurfaceMesh; name inlet2;}
-    outlet1.stl { type triSurfaceMesh; name outlet1;}
+    body.obj { type triSurfaceMesh; name body;}
+    inlet.obj { type triSurfaceMesh; name inlet;}
+    outlet.obj { type triSurfaceMesh; name outlet;}
 }
 
 
@@ -34,18 +33,17 @@ castellatedMeshControls
 {
     maxLocalCells 200000;
     maxGlobalCells 10000000;
-    minRefinementCells 10;
+    minRefinementCells 7;
     maxLoadUnbalance 0.10;
-    nCellsBetweenLevels 6;
+    nCellsBetweenLevels 4;
     features ();
 
 
     refinementSurfaces
     {
         body        { level (0 0);}
-        inlet1        { level (0 0);}
-        inlet2        { level (0 0);}
-        outlet1        { level (0 0);}
+        inlet        { level (0 0);}
+        outlet        { level (0 0);}
     }
 
     resolveFeatureAngle 2;
@@ -56,7 +54,7 @@ castellatedMeshControls
     }
 
 
-    locationInMesh (-0.045 0.120 0.014);
+    locationInMesh (0 0 0.08);
     allowFreeStandingZoneFaces false;
 }
 
@@ -122,6 +120,7 @@ meshQualityControls
 mergeTolerance 1E-6;
 
 
-// ************************************************************************* //
-// *********************	tensor-inf-2024		******************** //
-// *********************	pttensor.com		******************** //
+
+// ***************************************************************** //
+// ************************ tensorVLV - 2025 ******************************* //
+// ************************** pttensor.com ********************************* //

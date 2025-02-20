@@ -14,16 +14,18 @@ FoamFile
 }
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
-simulationType          RAS;
+simulationType      RAS;
 
 RAS
 {
-    RASModel            kEpsilon;
+    RASModel        kOmegaSST;
 
-    turbulence          on;
+    turbulence      on;
 
-    printCoeffs         on;
+    printCoeffs     on;
 }
 
 
 // ************************************************************************* //
+// ************************ tensorVLV - 2025 ******************************* //
+// ************************** pttensor.com ********************************* //

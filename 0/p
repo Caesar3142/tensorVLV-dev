@@ -14,38 +14,30 @@ FoamFile
 }
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
-dimensions      [1 -1 -2 0 0 0 0];
+dimensions      [1 -1 -2 0 0];
 
-internalField   uniform 101325;
+internalField   uniform 1e5;
 
 boundaryField
 {
+    outlet
+    {
+        type            totalPressure;
+        p0              uniform 1e5;
+    }
+
+    inlet
+    {
+        type            zeroGradient;
+    }
 
     body
     {
-        type            calculated;
-        value           uniform 101325;
+        type            zeroGradient;
     }
-
-    inlet1
-    {
-        type            calculated;
-        value           uniform 101325;
-    }
-    inlet2
-    {
-        type            calculated;
-        value           uniform 101325;
-    }
-    outlet1
-    {
-        type            calculated;
-        value           uniform 101325;
-    }
-
 }
 
 
 // ************************************************************************* //
-// *********************	tensor-inf-2024		******************** //
-// *********************	pttensor.com		******************** //
+// ************************ tensorVLV - 2025 ******************************* //
+// ************************** pttensor.com ********************************* //

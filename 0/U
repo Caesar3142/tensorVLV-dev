@@ -14,39 +14,29 @@ FoamFile
 }
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
-dimensions      [0 1 -1 0 0 0 0];
+dimensions      [0 1 -1 0 0];
 
-internalField   uniform (0.1 0 0);
+internalField   uniform (0 0 0);
 
 boundaryField
 {
+    inlet
+    {
+        type            flowRateInletVelocity;
+        massFlowRate    constant 5;      
+        value           uniform (0 0 0);  
+    }
+
+    outlet
+    {
+        type            zeroGradient;
+    }
+
     body
     {
         type            noSlip;
-    }
-    inlet1
-    {
-        type            flowRateInletVelocity;
-        massFlowRate    constant 0.001;  // Specify the mass flow rate (in kg/s)
-        rho             rho;           
-        value           uniform (0 0 0);  // Placeholder, calculated by OpenFOAM
-    }
-    inlet2
-    {
-        type            flowRateInletVelocity;
-        massFlowRate    constant 0.001;
-        rho             rho;           
-        value           uniform (0 0 0);  // Placeholder, calculated by OpenFOAM
-    }
-    outlet1
-    {
-        type            inletOutlet;
-        inletValue      uniform (0 0 0);
-        value           uniform (0 0 0);
     }
 }
 
 
 // ************************************************************************* //
-// *********************	tensor-vlv-2024		******************** //
-// *********************	pttensor.com		******************** //

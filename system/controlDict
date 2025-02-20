@@ -14,21 +14,21 @@ FoamFile
 }
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
-application     buoyantSimpleFoam;
+application     cavitatingFoam;
 
-startFrom       startTime;
+startFrom       latestTime;
 
 startTime       0;
 
 stopAt          endTime;
 
-endTime         1000;
+endTime         0.2;
 
-deltaT          1;
+deltaT          1e-06;
 
-writeControl    timeStep;
+writeControl    adjustable;
 
-writeInterval   200;
+writeInterval   0.001;
 
 purgeWrite      0;
 
@@ -40,11 +40,15 @@ writeCompression off;
 
 timeFormat      general;
 
-timePrecision   6;
+runTimeModifiable yes;
 
-runTimeModifiable true;
+adjustTimeStep  on;
+
+maxCo           0.2;
+
+maxAcousticCo   10;
 
 
-
-// *********************	tensor-vlv-2024		******************** //
-// *********************	pttensor.com		******************** //
+// ************************************************************************* //
+// ************************ tensorVLV - 2025 ******************************* //
+// ************************** pttensor.com ********************************* //

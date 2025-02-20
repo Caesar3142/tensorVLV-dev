@@ -1,7 +1,7 @@
 /*--------------------------------*- C++ -*----------------------------------*\
 | =========                 |                                                 |
 | \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
-|  \\    /   O peration     | Version:  2412                                  |
+|  \\    /   O peration     | Version:  v2406                                 |
 |   \\  /    A nd           | Website:  www.openfoam.com                      |
 |    \\/     M anipulation  |                                                 |
 \*---------------------------------------------------------------------------*/
@@ -9,36 +9,24 @@ FoamFile
 {
     version     2.0;
     format      ascii;
-    arch        "LSB;label=32;scalar=64";
-    class       polyBoundaryMesh;
-    location    "constant/polyMesh";
-    object      boundary;
+    class       dictionary;
+    object      thermodynamicProperties;
 }
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
-3
-(
-    body
-    {
-        type            wall;
-        inGroups        1(wall);
-        nFaces          10440;
-        startFace       94121;
-    }
-    inlet
-    {
-        type            wall;
-        inGroups        1(wall);
-        nFaces          164;
-        startFace       104561;
-    }
-    outlet
-    {
-        type            wall;
-        inGroups        1(wall);
-        nFaces          164;
-        startFace       104725;
-    }
-)
+barotropicCompressibilityModel linear;
+
+psiv            2.5e-06;
+
+rholSat         990;
+
+psil            5e-07;
+
+pSat            10000; //saturation pressure
+
+rhoMin          0.001;
+
 
 // ************************************************************************* //
+// ************************ tensorVLV - 2025 ******************************* //
+// ************************** pttensor.com ********************************* //

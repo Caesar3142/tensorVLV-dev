@@ -16,36 +16,29 @@ FoamFile
 
 dimensions      [0 2 -2 0 0 0 0];
 
-internalField   uniform 0.1;
+internalField   uniform 10;
 
 boundaryField
 {
-    body
-    {
-        type            kqRWallFunction;
-        value           uniform 0.1;
-    }
-
-    inlet1
+    inlet
     {
         type            fixedValue;
-        value           uniform 0.1;
+        value           $internalField;
     }
 
-    inlet2
-    {
-        type            fixedValue;
-        value           uniform 0.1;
-    }
-
-    outlet1
+    outlet
     {
         type            zeroGradient;
     }
 
+    body
+    {
+        type            kqRWallFunction;
+        value           $internalField;
+    }
 }
 
 
 // ************************************************************************* //
-// *********************	tensor-inf-2024		******************** //
-// *********************	pttensor.com		******************** //
+// ************************ tensorVLV - 2025 ******************************* //
+// ************************** pttensor.com ********************************* //
