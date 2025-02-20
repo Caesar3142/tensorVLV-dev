@@ -1,6 +1,8 @@
-TensorVLV, part of the TensorCFD project by pttensor.com, accelerates OpenFOAM deployment in industrial applications. It provides templates for valve simulation, calculating pressure drop and cavitation. Users can copy, replace geometry or boundary conditions, and simulate internal flow, incompressible, steady, phase change for vapor (cavitation), with RAS turbulent models.
+TensorVLV, part of the TensorCFD project by pttensor.com, accelerates OpenFOAM deployment in industrial applications. It provides templates for valve simulation, calculating pressure drop and cavitation. 
 
-Acknowledge “tensor-VLV” if using this template folder.
+With this development version, Users can copy, replace geometry or boundary conditions, and simulate internal flow, incompressible, steady, phase change for vapor (cavitation), with RAS turbulent models.
+
+Acknowledge “tensorVLV” if using this template folder.
 
 Note: This development version may have non-optimized setups for accuracy, validity, or computational efficiency. Results depend on the case and setup. pttensor.com disclaims responsibility for results.
 
