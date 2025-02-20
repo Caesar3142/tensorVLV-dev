@@ -33,9 +33,9 @@ castellatedMeshControls
 {
     maxLocalCells 200000;
     maxGlobalCells 10000000;
-    minRefinementCells 7;
+    minRefinementCells 10;
     maxLoadUnbalance 0.10;
-    nCellsBetweenLevels 4;
+    nCellsBetweenLevels 10;
     features ();
 
 
@@ -122,5 +122,5 @@ mergeTolerance 1E-6;
 
 
 // ***************************************************************** //
-// ************************ tensorVLV - 2025 ******************************* //
-// ************************** pttensor.com ********************************* //
+// *********************	tensor-inf-2025		******************** //
+// *********************	pttensor.com		******************** //

@@ -23,7 +23,7 @@ boundaryField
     inlet
     {
         type            flowRateInletVelocity;
-        massFlowRate    constant 5;      
+        massFlowRate    constant 8;      
         value           uniform (0 0 0);  
     }
 

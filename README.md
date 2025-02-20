@@ -7,7 +7,7 @@ Note: This development version may have non-optimized setups for accuracy, valid
 How to Run:
 #1. execute 'chmod +x buildMesh', 'chmod +x Run', and 'chmod +x cleanResults' to make these functions executable.
 #2. execute './buildMesh' to build the mesh with blockMesh then snappyHexMesh
-#3. execute './Run' to decompose mesh, start running, and reconstruct mesh
+#3. execute './Run' to decompose mesh, start running, and reconstruct mesh (edit the number of processor on file "Run" based on your "decomposeParDict" setup)
 #4. execute 'touch valve.foam' to prepare the file for post-processing
 #5. execute './cleanResults' to delete the time and processor folders
 
