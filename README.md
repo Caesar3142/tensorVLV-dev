@@ -4,6 +4,8 @@ With this development version, Users can copy, replace geometry or boundary cond
 
 Acknowledge “tensorVLV” if using this template folder.
 
+Watch this tutorial how to setup a case using this template: https://youtu.be/tQTpW4BUxeQ?feature=shared
+
 Note: This development version may have non-optimized setups for accuracy, validity, or computational efficiency. Results depend on the case and setup. pttensor.com disclaims responsibility for results.
 
 How to Run:
